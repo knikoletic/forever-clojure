@@ -57,3 +57,7 @@
 (= 3 (first '(3 2 1)))
 (= 3 (second [2 3 4]))
 (= 3 (last (list 1 2 3)))
+
+;; [Problem 13: Rest [Elementary]](http://www.4clojure.com/problem/13)
+
+(= [20 30 40] (rest [10 20 30 40]))
