@@ -123,3 +123,20 @@
 (= (nth-element [:a :b :c] 0) :a)
 (= (nth-element [1 2 3 4] 1) 2)
 (= (nth-element '([1 2] [3 4] [5 6]) 2) [5 6])
+
+;; [Problem 22: Count a sequence [Elementary]](http://www.4clojure.com/problem/22)
+(defn counter
+  [list]
+  (->> list
+       (map-indexed (fn [idx itm] [idx itm]))
+       last
+       first
+       (+ 1)))
+
+(= (counter '(1 2 3 3 1)) 5)
+(= (counter "Hello World") 11)
+(= (counter [[1 2] [3 4] [5 6]]) 3)
+(= (counter '(13)) 1)
+(= (counter '(:a :b :c)) 3)
+
+
