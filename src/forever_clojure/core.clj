@@ -33,3 +33,10 @@
 (= vector-one-to-four (conj [1 2 3] 4))
 (= vector-one-to-four (conj [1 2] 3 4))
 
+;; [Problem 8: Sets [Elementary]](http://www.4clojure.com/problem/8)
+
+(def set-keywords-a-d #{:a :b :c :d})
+(= set-keywords-a-d (set '(:a :a :b :c :c :c :c :d :d)))
+(= set-keywords-a-d (clojure.set/union #{:a :b :c} #{:b :c :d}))
+
+
