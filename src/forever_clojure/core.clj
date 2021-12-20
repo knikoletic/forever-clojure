@@ -115,3 +115,11 @@
 (= (second-to-last (list 1 2 3 4 5)) 4)
 (= (second-to-last ["a" "b" "c"]) "b")
 (= (second-to-last [[1 2] [3 4]]) [1 2])
+
+;; [Problem 21: Nth element [Elementary]](http://www.4clojure.com/problem/21)
+(defn nth-element [list n] (->> list (drop n) first))
+
+(= (nth-element '(4 5 6 7) 2) 6)
+(= (nth-element [:a :b :c] 0) :a)
+(= (nth-element [1 2 3 4] 1) 2)
+(= (nth-element '([1 2] [3 4] [5 6]) 2) [5 6])
