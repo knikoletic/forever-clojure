@@ -76,3 +76,10 @@
 (= (doubles 3) 6)
 (= (doubles 11) 22)
 (= (doubles 7) 14)
+
+;; [Problem 16: Hello fun [Elementary]](http://www.4clojure.com/problem/16)
+(defn hello [x] (str "Hello, " x "!"))
+
+(= (hello "Dave") "Hello, Dave!")
+(= (hello "Jenn") "Hello, Jenn!")
+(= (hello "Rhea") "Hello, Rhea!")
