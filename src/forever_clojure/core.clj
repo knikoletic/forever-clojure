@@ -22,3 +22,7 @@
 (def list-one-to-four '(1 2 3 4))
 (= list-one-to-four (conj '(2 3 4) 1))
 (= list-one-to-four (conj '(3 4) 2 1))
+
+;; [Problem 6: Intro to Vectors [Elementary]](http://www.4clojure.com/problem/6)
+
+(= [:a :b :c] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
