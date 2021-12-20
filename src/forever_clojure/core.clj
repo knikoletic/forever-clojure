@@ -42,3 +42,8 @@
 ;; [Problem 9: Conj on sets [Elementary]](http://www.4clojure.com/problem/9)
 
 (= #{1 2 3 4} (conj #{1 4 3} 2))
+
+;; [Problem 10: Maps [Elementary]](http://www.4clojure.com/problem/10)
+
+(= 20 ((hash-map :a 10, :b 20, :c 30) :b))
+(= 20 (:b {:a 10, :b 20, :c 30}))
