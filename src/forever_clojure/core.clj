@@ -139,4 +139,34 @@
 (= (counter '(13)) 1)
 (= (counter '(:a :b :c)) 3)
 
+;; [Problem 23: Revert a sequence [Elementary]](http://www.4clojure.com/problem/23)
+(defn recursive-reverse [coll]
+  (loop [[head & tail] coll new []]
+    (if-not head
+      new
+      (recur tail (cons head new)))))
 
+(= (recursive-reverse [1 2 3 4 5]) [5 4 3 2 1])
+(= (recursive-reverse (sorted-set 5 7 2 7)) '(7 5 2))
+(= (recursive-reverse [[1 2][3 4][5 6]]) [[5 6][3 4][1 2]])
+
+;; [Problem 24: Sum a sequence [Elementary]](http://www.4clojure.com/problem/24)
+(defn sum
+  [seq]
+  (reduce + seq))
+
+(= (sum [1 2 3]) 6)
+(= (sum (list 0 -2 5 5)) 8)
+(= (sum #{4 2 1}) 7)
+(= (sum '(0 0 -1)) -1)
+(= (sum '(1 10 3)) 14)
+
+;; [Problem 25: Odd numbers [Elementary]](http://www.4clojure.com/problem/25)
+(defn odd-numbers
+  [seq]
+  (filter odd? seq))
+
+(= (odd-numbers #{1 2 3 4 5}) '(1 3 5))
+(= (odd-numbers [4 2 1 6]) '(1))
+(= (odd-numbers [2 2 4 6]) '())
+(= (odd-numbers [1 1 1 3]) '(1 1 1 3))
