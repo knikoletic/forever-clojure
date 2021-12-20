@@ -26,3 +26,10 @@
 ;; [Problem 6: Intro to Vectors [Elementary]](http://www.4clojure.com/problem/6)
 
 (= [:a :b :c] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
+
+;; [Problem 7: Conj on vectors [Elementary]](http://www.4clojure.com/problem/7)
+
+(def vector-one-to-four [1 2 3 4])
+(= vector-one-to-four (conj [1 2 3] 4))
+(= vector-one-to-four (conj [1 2] 3 4))
+
