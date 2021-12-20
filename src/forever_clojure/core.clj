@@ -8,3 +8,7 @@
 ;; [Problem 2: 	Simple Math [Elementary]](http://www.4clojure.com/problem/2)
 
 (= (- 10 (* 2 3)) 4)
+
+;; [Problem 3: Strings [Elementary]](http://www.4clojure.com/problem/3)
+
+(= "HELLO WORLD" (.toUpperCase "hello world"))
