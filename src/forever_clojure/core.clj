@@ -17,4 +17,8 @@
 
 (= (list :a :b :c) '(:a :b :c))
 
+;; [Problem 5: Conj on lists [Elementary]](http://www.4clojure.com/problem/5)
 
+(def list-one-to-four '(1 2 3 4))
+(= list-one-to-four (conj '(2 3 4) 1))
+(= list-one-to-four (conj '(3 4) 2 1))
