@@ -61,3 +61,18 @@
 ;; [Problem 13: Rest [Elementary]](http://www.4clojure.com/problem/13)
 
 (= [20 30 40] (rest [10 20 30 40]))
+
+;; [Problem 14: Functions [Elementary]](http://www.4clojure.com/problem/14)
+
+(= 8 ((fn add-five [x] (+ x 5)) 3))
+(= 8 ((fn [x] (+ x 5)) 3))
+(= 8 (#(+ % 5) 3))
+(= 8 ((partial + 5) 3))
+
+;; [Problem 15: Functions [Elementary]](http://www.4clojure.com/problem/15)
+(defn doubles [x] (* x 2))
+
+(= (doubles 2) 4)
+(= (doubles 3) 6)
+(= (doubles 11) 22)
+(= (doubles 7) 14)
