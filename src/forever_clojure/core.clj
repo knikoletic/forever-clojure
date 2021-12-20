@@ -39,4 +39,6 @@
 (= set-keywords-a-d (set '(:a :a :b :c :c :c :c :d :d)))
 (= set-keywords-a-d (clojure.set/union #{:a :b :c} #{:b :c :d}))
 
+;; [Problem 9: Conj on sets [Elementary]](http://www.4clojure.com/problem/9)
 
+(= #{1 2 3 4} (conj #{1 4 3} 2))
