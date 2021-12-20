@@ -47,3 +47,7 @@
 
 (= 20 ((hash-map :a 10, :b 20, :c 30) :b))
 (= 20 (:b {:a 10, :b 20, :c 30}))
+
+;; [Problem 11: Conj on maps [Elementary]](http://www.4clojure.com/problem/11)
+
+(= {:a 1, :b 2, :c 3} (conj {:a 1} [:b 2] [:c 3]))
