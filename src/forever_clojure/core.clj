@@ -91,3 +91,15 @@
 ;; [Problem 18: Filter [Elementary]](http://www.4clojure.com/problem/18)
 
 (= [6 7] (filter #(> % 5) '(3 4 5 6 7)))
+
+;; [Problem 19: Last Element [Elementary]](http://www.4clojure.com/problem/19)
+(defn my-last 
+  [list]
+  (loop [[head & tail] list]
+    (if-not tail
+      head
+      (recur tail))))
+
+(= (my-last [1 2 3 4 5]) 5)
+(= (my-last '(5 4 3)) 3)
+(= (my-last ["b" "c" "d"]) "d")
