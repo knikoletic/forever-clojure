@@ -51,3 +51,9 @@
 ;; [Problem 11: Conj on maps [Elementary]](http://www.4clojure.com/problem/11)
 
 (= {:a 1, :b 2, :c 3} (conj {:a 1} [:b 2] [:c 3]))
+
+;; [Problem 12: Sequences [Elementary]](http://www.4clojure.com/problem/12)
+
+(= 3 (first '(3 2 1)))
+(= 3 (second [2 3 4]))
+(= 3 (last (list 1 2 3)))
