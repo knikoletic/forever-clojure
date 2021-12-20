@@ -170,3 +170,16 @@
 (= (odd-numbers [4 2 1 6]) '(1))
 (= (odd-numbers [2 2 4 6]) '())
 (= (odd-numbers [1 1 1 3]) '(1 1 1 3))
+
+;; [Problem 26: Fibonacci Sequence [Easy]](http://www.4clojure.com/problem/26)
+(defn factorial
+  [n]
+  (loop [no n acc 2 new [1 1]]
+    (if (= acc n)
+      new
+      (recur n (inc acc)
+             (conj new (+ (last new) (second-to-last new)))))))
+
+(= (factorial 3) '(1 1 2))
+(= (factorial 6) '(1 1 2 3 5 8))
+(= (factorial 8) '(1 1 2 3 5 8 13 21))
