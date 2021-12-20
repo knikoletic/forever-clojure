@@ -12,3 +12,9 @@
 ;; [Problem 3: Strings [Elementary]](http://www.4clojure.com/problem/3)
 
 (= "HELLO WORLD" (.toUpperCase "hello world"))
+
+;; [Problem 4: Lists [Elementary]](http://www.4clojure.com/problem/4)
+
+(= (list :a :b :c) '(:a :b :c))
+
+
