@@ -103,3 +103,15 @@
 (= (my-last [1 2 3 4 5]) 5)
 (= (my-last '(5 4 3)) 3)
 (= (my-last ["b" "c" "d"]) "d")
+
+;; [Problem 20: Penultimate Element [Elementary]](http://www.4clojure.com/problem/20)
+(defn second-to-last
+  [list]
+  (loop [[head & tail] list]
+    (if (= 1 (count tail))
+      head
+      (recur tail))))
+
+(= (second-to-last (list 1 2 3 4 5)) 4)
+(= (second-to-last ["a" "b" "c"]) "b")
+(= (second-to-last [[1 2] [3 4]]) [1 2])
